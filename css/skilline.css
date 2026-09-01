@@ -1,0 +1,252 @@
+/* ========================================
+   SKILLINE CHILDCARE — DESIGN SYSTEM
+   ======================================== */
+
+/* Primary cream background */
+.bg-cream {
+    background-color: #FFF2E1;
+}
+
+/* Font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Template color overrides (keep exact values) */
+.bg-yellow-500 {
+    background-color: #F48C06;
+}
+.text-yellow-500 {
+    color: #F48C06;
+}
+.text-darken {
+    color: #2F327D;
+}
+
+/* ========================================
+   CHILDCARE COLOR TOKENS
+   ======================================== */
+
+.bg-sage {
+    background-color: #8BA888;
+}
+.text-sage {
+    color: #8BA888;
+}
+.border-sage {
+    border-color: #8BA888;
+}
+.bg-sage-dark {
+    background-color: #6B8A68;
+}
+.text-sage-dark {
+    color: #6B8A68;
+}
+.bg-coral {
+    background-color: #F3627C;
+}
+.text-coral {
+    color: #F3627C;
+}
+.bg-sky-muted {
+    background-color: #B8E2F2;
+}
+.text-footer {
+    background-color: rgba(37, 38, 65, 1);
+}
+
+/* ========================================
+   SOFTENED ANIMATIONS (Childcare Tone)
+   ======================================== */
+
+.floating {
+    animation-name: floating-soft;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating-soft {
+    0%   { transform: translate(0, 0px); }
+    50%  { transform: translate(0, 6px); }
+    100% { transform: translate(0, -0px); }
+}
+
+.floating-4 {
+    animation-name: floating-soft-slow;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating-soft-slow {
+    0%   { transform: translate(0, 0px); }
+    50%  { transform: translate(0, 5px); }
+    100% { transform: translate(0, -0px); }
+}
+
+/* ========================================
+   COMPONENT STYLES
+   ======================================== */
+
+/* Sticky nav glass effect */
+.nav-glass {
+    background-color: rgba(255, 242, 225, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hero CTA buttons */
+.btn-primary {
+    background-color: #F48C06;
+    color: white;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(244, 140, 6, 0.35);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #2F327D;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-color: #d1d5db;
+}
+
+/* Mobile bottom sticky bar */
+.mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255, 242, 225, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Section label pattern (matching template's uppercase tracking) */
+.section-label {
+    color: #9CA3AF;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+/* Section spacing — more breathing room than template */
+.section-gap {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Trust badge icon circle */
+.trust-icon-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+}
+
+/* Mobile bottom bar spacing for body */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 4.5rem;
+    }
+}
+
+/* Accordion transition */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+}
+.accordion-content.open {
+    max-height: 500px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Timeline line */
+.timeline-line {
+    position: absolute;
+    left: 1.25rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #8BA888;
+}
+
+@media (min-width: 768px) {
+    .timeline-line {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Tab active state */
+.tab-active {
+    border-bottom: 3px solid #F48C06;
+    color: #2F327D;
+    font-weight: 600;
+}
+
+/* Gallery image hover */
+.gallery-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Star rating */
+.star-filled {
+    color: #F48C06;
+}
+.star-empty {
+    color: #D1D5DB;
+}
+
+/* Form input focus */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #8BA888;
+    box-shadow: 0 0 0 3px rgba(139, 168, 136, 0.2);
+}
