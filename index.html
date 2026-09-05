@@ -50,6 +50,9 @@ html.dark .border-gray-200,html.dark .border-t{border-color:var(--c-border)!impo
 .tab-active{border-bottom:3px solid #F48C06;color:#2F327D;font-weight:600}
 .gallery-img{transition:transform .3s ease,box-shadow .3s ease}.gallery-img:hover{transform:scale(1.02);box-shadow:0 8px 30px rgba(0,0,0,.12)}
 .lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;display:flex;align-items:center;justify-content:center;padding:1rem}
+#facility .facility-frame{position:relative;width:100%;padding-top:75%}
+#facility .facility-frame img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+#facility .facility-lightbox-img{max-height:85vh;max-width:95vw;width:auto;object-fit:contain}
 input:focus,textarea:focus,select:focus{outline:none;border-color:#8BA888;box-shadow:0 0 0 3px rgba(139,168,136,.2)}
 .hero-fade-right{animation:heroFadeRight .8s ease-out both}.hero-fade-up{animation:heroFadeUp .8s ease-out both}
 .hero-delay-1{animation-delay:.15s}.hero-delay-2{animation-delay:.3s}.hero-delay-3{animation-delay:.5s}
@@ -570,21 +573,58 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:#8BA888;box-sh
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-darken" data-i18n="facility_heading">Take a Tour</h2>
     <p class="text-gray-500 mt-3 max-w-xl mx-auto text-sm sm:text-base" data-i18n="facility_sub">Bright, safe, and designed with little ones in mind.</p>
   </div>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer aspect-video bg-gray-100" @click="lightbox='hero'"><img src="images/hero.jpg" alt="Classroom" class="w-full h-full object-cover"></div>
-    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer aspect-video" @click="lightbox='t1'"><img src="images/TEACHER_SAR_1.png" alt="Teacher" class="w-full h-full object-cover object-top"></div>
-    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer aspect-video" @click="lightbox='t2'"><img src="images/TEACHER_HANA_2.png" alt="Teacher" class="w-full h-full object-cover object-top"></div>
-    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer aspect-video" @click="lightbox='t3'"><img src="images/TEACHER_KIDEST_3.png" alt="Teacher" class="w-full h-full object-cover object-top"></div>
-    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer aspect-video" @click="lightbox='t4'"><img src="images/TEACHER_LIYA_4.png" alt="Teacher" class="w-full h-full object-cover object-top"></div>
-    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer aspect-video" @click="lightbox='hero2'"><img src="images/hero.jpg" alt="Classroom" class="w-full h-full object-cover"></div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f1'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-1.jpg" alt="Bright, safe play area at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f2'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-2.jpg" alt="Cozy reading and story-time corner at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f3'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-3.jpg" alt="Toddler activity room with learning stations at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f4'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-4.jpg" alt="Safe outdoor play area at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f5'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-5.jpg" alt="Infant care room with nurturing environment at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f6'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-6.jpg" alt="Clean, welcoming entrance and hallway at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f7'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-7.jpg" alt="Outdoor playground and play equipment at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-md gallery-img cursor-pointer" @click="lightbox='f8'">
+      <div class="facility-frame w-full bg-gray-100">
+        <img src="img/facility-8.jpg" alt="Bright classroom circle-time area at Rise and Shine Daycare &amp; Pre-KG Center" class="w-full h-full object-cover">
+      </div>
+    </div>
   </div>
-  <div x-show="lightbox" x-cloak class="lightbox-overlay" @click="lightbox=null">
-    <button class="absolute top-4 right-4 text-white text-2xl font-bold focus:outline-none" @click="lightbox=null">✕</button>
-    <img x-show="lightbox==='hero'||lightbox==='hero2'" src="images/hero.jpg" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl" alt="Classroom">
-    <img x-show="lightbox==='t1'" src="images/TEACHER_SAR_1.png" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl" alt="Teacher Sar">
-    <img x-show="lightbox==='t2'" src="images/TEACHER_HANA_2.png" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl" alt="Teacher Hana">
-    <img x-show="lightbox==='t3'" src="images/TEACHER_KIDEST_3.png" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl" alt="Teacher Kidest">
-    <img x-show="lightbox==='t4'" src="images/TEACHER_LIYA_4.png" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl" alt="Teacher Liya">
+  <div x-show="lightbox" x-cloak class="lightbox-overlay" @click.self="lightbox=null">
+    <button class="absolute top-4 right-4 text-white text-3xl font-bold leading-none focus:outline-none z-10" @click="lightbox=null" aria-label="Close lightbox">✕</button>
+    <img x-show="lightbox==='f1'" src="img/facility-1.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Bright, safe play area at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f2'" src="img/facility-2.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Cozy reading and story-time corner at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f3'" src="img/facility-3.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Toddler activity room with learning stations at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f4'" src="img/facility-4.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Safe outdoor play area at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f5'" src="img/facility-5.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Infant care room with nurturing environment at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f6'" src="img/facility-6.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Clean, welcoming entrance and hallway at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f7'" src="img/facility-7.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Outdoor playground and play equipment at Rise and Shine Daycare &amp; Pre-KG Center">
+    <img x-show="lightbox==='f8'" src="img/facility-8.jpg" class="facility-lightbox-img rounded-xl shadow-2xl object-contain" alt="Bright classroom circle-time area at Rise and Shine Daycare &amp; Pre-KG Center">
   </div>
   <div class="mt-10 bg-white rounded-xl shadow-xl p-6 max-w-sm mx-auto text-center">
     <h3 class="font-bold text-darken text-base mb-2" data-i18n="facility_tiktok_heading">From Our TikTok</h3>
