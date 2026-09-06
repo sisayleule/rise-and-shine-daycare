@@ -773,8 +773,37 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:#8BA888;box-sh
         <div class="flex items-center space-x-4"><div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(243,98,124,0.15)"><svg class="w-5 h-5 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><h4 class="font-semibold text-darken text-sm" data-i18n="info_email_label">Email</h4><a href="mailto:riseshininedaycare@gmail.com" class="text-gray-500 text-xs hover:text-sage">riseshininedaycare@gmail.com</a></div></div>
         <div class="flex items-center space-x-4"><div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(184,226,242,0.4)"><svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><h4 class="font-semibold text-darken text-sm" data-i18n="info_hours_label">Hours</h4><p class="text-gray-500 text-xs" data-i18n="info_hours">Monday – Friday: 7:00 AM – 6:00 PM</p></div></div>
       </div>
+      <!-- Map + Directions -->
       <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-        <iframe src="https://maps.google.com/maps?q=Hawassa,+Sidama,+Ethiopia&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="280" style="border:0;display:block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rise and Shine location — Hawassa"></iframe>
+        <!-- Responsive map embed: aspect-[4/3] on mobile, fixed height on lg -->
+        <div class="w-full aspect-[4/3] lg:aspect-auto lg:h-72">
+          <iframe
+            src="https://www.google.com/maps?q=Pharma+College+Hawassa&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Pharma College, Hawassa — near Rise and Shine Daycare">
+          </iframe>
+        </div>
+        <!-- Get Directions button + landmark note -->
+        <div class="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p class="text-xs text-gray-500 flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Located near ፋርማ ኮሌጅ / Pharma College, Hawassa
+          </p>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Pharma+College+Hawassa"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary text-sm whitespace-nowrap justify-center sm:justify-start"
+          >
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Get Directions
+          </a>
+        </div>
       </div>
     </div>
   </div>
