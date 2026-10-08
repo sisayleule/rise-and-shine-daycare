@@ -22,27 +22,42 @@ const translations = {
   trust_cpr: "CPR & First Aid", trust_background: "Background Checked", trust_years: "Years of Care",
   programs_label: "Our Programs", programs_heading: "Age-Appropriate Care for Every Stage",
   programs_sub: "Each program is designed to nurture your child's developmental milestones in a safe, stimulating environment.",
-  prog_infant_title: "Infant Care", prog_infant_age: "6 – 12 months",
-  prog_infant_desc: "Gentle, responsive care focused on building secure attachment and reaching early motor milestones.",
-  prog_infant_ratio: "1 caregiver per 4 infants", prog_infant_routine_title: "Sample Routine:",
-  prog_infant_r1: "Arrival & free play", prog_infant_r2: "Feeding (bottle/solids per schedule)",
-  prog_infant_r3: "Sensory exploration", prog_infant_r4: "Tummy time & motor activities",
-  prog_infant_r5: "Nap (on individual schedule)", prog_infant_r6: "Music & cuddle time",
-  prog_infant_focus: "Sensory development, fine/gross motor skills, language exposure, secure attachment",
-  prog_toddler_title: "Toddler Care", prog_toddler_age: "1 – 2 years",
-  prog_toddler_desc: "Active exploration and early learning through structured play, language-rich interactions, and social growth.",
-  prog_toddler_ratio: "1 caregiver per 6 toddlers",
-  prog_toddler_r1: "Morning circle & welcome", prog_toddler_r2: "Art & sensory play",
-  prog_toddler_r3: "Snack & story time", prog_toddler_r4: "Outdoor exploration",
-  prog_toddler_r5: "Lunch & nap", prog_toddler_r6: "Music, movement & free play",
-  prog_toddler_focus: "Language development, early counting, social skills, self-help basics (feeding, dressing)",
-  prog_young_title: "Young Toddler Care", prog_young_age: "2 – 3 years",
-  prog_young_desc: "Preparing confident, curious learners through creative play, early academics, and independence building.",
-  prog_young_ratio: "1 caregiver per 6 children",
-  prog_young_r1: "Morning greeting & calendar", prog_young_r2: "Pre-writing & shape activities",
-  prog_young_r3: "Science & nature exploration", prog_young_r4: "Outdoor play & gross motor",
-  prog_young_r5: "Lunch & quiet time", prog_young_r6: "Dramatic play & group projects",
-  prog_young_focus: "Pre-literacy, early math concepts, emotional regulation, cooperative play, school readiness",
+  // Infants (6–12 months)
+  prog_infant_title: "Infants", prog_infant_age: "6 – 12 months",
+  prog_infant_desc: "Feeding, hygiene, safe sleep, and close supervision to support early development.",
+  prog_infant_i1_label: "Feeding:", prog_infant_i1_text: "Provide appropriate complementary food and breastfeeding support.",
+  prog_infant_i2_label: "Hygiene:", prog_infant_i2_text: "Keep the baby, clothes, feeding materials, and sleeping area clean.",
+  prog_infant_i3_label: "Sleep:", prog_infant_i3_text: "Provide safe and comfortable rest and sleep.",
+  prog_infant_i4_label: "Development:", prog_infant_i4_text: "Talk, sing, smile, hold, and play with the baby.",
+  prog_infant_i5_label: "Movement:", prog_infant_i5_text: "Provide safe space for crawling, sitting, standing, and reaching.",
+  prog_infant_i6_label: "Safety:", prog_infant_i6_text: "Closely supervise the baby and keep small or dangerous objects away.",
+  // Young Toddlers (1–2 years)
+  prog_young_title: "Young Toddlers", prog_young_age: "1 – 2 years",
+  prog_young_desc: "Nutritious meals, language-rich play, walking and movement to build early independence.",
+  prog_young_i1_label: "Feeding:", prog_young_i1_text: "Provide nutritious meals and snacks and encourage self-feeding.",
+  prog_young_i2_label: "Hygiene:", prog_young_i2_text: "Support handwashing, diapering/toileting, bathing, and clean clothing.",
+  prog_young_i3_label: "Language:", prog_young_i3_text: "Talk, name objects, sing songs, and encourage simple words.",
+  prog_young_i4_label: "Movement:", prog_young_i4_text: "Encourage walking, running, climbing, and simple physical play.",
+  prog_young_i5_label: "Play:", prog_young_i5_text: "Provide simple toys, picture books, music, and safe exploration.",
+  prog_young_i6_label: "Independence:", prog_young_i6_text: "Encourage children to do simple things by themselves.",
+  // Toddlers (2–3 years)
+  prog_toddler_title: "Toddlers", prog_toddler_age: "2 – 3 years",
+  prog_toddler_desc: "Learning through play, social skills, and personal independence using local materials and daily routines.",
+  prog_toddler_i1_label: "Feeding:", prog_toddler_i1_text: "Provide balanced local foods and encourage children to eat independently.",
+  prog_toddler_i2_label: "Hygiene:", prog_toddler_i2_text: "Teach handwashing, toilet use, and personal cleanliness.",
+  prog_toddler_i3_label: "Language:", prog_toddler_i3_text: "Encourage speaking, listening, naming, and simple conversations.",
+  prog_toddler_i4_label: "Learning through play:", prog_toddler_i4_text: "Use local materials, toys, songs, stories, drawing, and simple games.",
+  prog_toddler_i5_label: "Social skills:", prog_toddler_i5_text: "Teach sharing, taking turns, greeting, and playing with others.",
+  prog_toddler_i6_label: "Independence:", prog_toddler_i6_text: "Encourage dressing, eating, cleaning up, and other simple self-help activities.",
+  // Preschool Age (3–4 years)
+  prog_pre_title: "Preschool Age", prog_pre_age: "3 – 4 years",
+  prog_pre_desc: "Numbers, letters, creativity, and outdoor play to build confidence and school readiness.",
+  prog_pre_i1_label: "Learning:", prog_pre_i1_text: "Introduce simple numbers, letters, colors, shapes, and everyday concepts.",
+  prog_pre_i2_label: "Language:", prog_pre_i2_text: "Develop speaking, listening, storytelling, and vocabulary.",
+  prog_pre_i3_label: "Social development:", prog_pre_i3_text: "Teach cooperation, sharing, respect, and following simple rules.",
+  prog_pre_i4_label: "Creativity:", prog_pre_i4_text: "Provide drawing, coloring, music, singing, storytelling, and role play.",
+  prog_pre_i5_label: "Physical development:", prog_pre_i5_text: "Provide outdoor play, running, jumping, balancing, and other physical activities.",
+  prog_pre_i6_label: "School readiness:", prog_pre_i6_text: "Develop attention, participation, self-confidence, independence, and simple learning routines.",
   prog_learn_more: "Learn more", prog_show_less: "Show less",
   prog_ratio_label: "Ratio:", prog_focus_label: "Focus:",
   schedule_label: "Daily Schedule", schedule_heading: "A Day in the Life",
@@ -163,27 +178,42 @@ const translations = {
   trust_cpr: "CPR እና የመጀመሪያ እርዳታ", trust_background: "የዳራ ማጣሪያ ያለፈ", trust_years: "ዓመታት አገልግሎት",
   programs_label: "ፕሮግራሞቻችን", programs_heading: "ለእያንዳንዱ እድሜ ተስማሚ እንክብካቤ",
   programs_sub: "እያንዳንዱ ፕሮግራም የልጅዎን የዕድገት ደረጃዎች ለማሳደግ ደህንነቱ በተጠበቀ እና አነቃቂ አካባቢ ነው የተዘጋጀው።",
-  prog_infant_title: "ሕፃን ልጅ እንክብካቤ", prog_infant_age: "6 – 12 ወር",
-  prog_infant_desc: "ጸጥ ያለ እና ምላሽ ሰጪ እንክብካቤ — ጠንካራ ትስስር እና ቀደምት የሞተር ክህሎቶችን ለማዳበር ያለመ።",
-  prog_infant_ratio: "1 ተንከባካቢ ለ4 ሕፃናት", prog_infant_routine_title: "ናሙና መርሃ ግብር፡",
-  prog_infant_r1: "መምጣት እና ነፃ ጨዋታ", prog_infant_r2: "አመጋገብ (ጠርሙስ/ጠጣር ምግብ)",
-  prog_infant_r3: "የስሜት ህዋሳት ጥናት", prog_infant_r4: "ሆድ ስር መደገፍ እና የሞተር እንቅስቃሴዎች",
-  prog_infant_r5: "ዕረፍት (በግለሰብ መርሃ ግብር)", prog_infant_r6: "ሙዚቃ እና ቁጥቋጦ ጊዜ",
-  prog_infant_focus: "የስሜት ህዋሳት ዕድገት፣ ጥሩ/ጠቅላላ የሞተር ክህሎቶች፣ ቋንቋ መጋለጥ፣ ጸጥ ያለ ትስስር",
-  prog_toddler_title: "ጊዜያዊ ልጅ እንክብካቤ", prog_toddler_age: "1 – 2 ዓመት",
-  prog_toddler_desc: "ስልቱ ባለው ጨዋታ፣ ቋንቋ ሀብታም ግንኙነቶች እና ማህበራዊ ዕድገት ጠንካራ ፍለጋ እና ቀደምት ትምህርት።",
-  prog_toddler_ratio: "1 ተንከባካቢ ለ6 ጊዜያዊ ልጆች",
-  prog_toddler_r1: "የጠዋት ክበብ እና አቀባበል", prog_toddler_r2: "ስዕል እና የስሜት ህዋሳት ጨዋታ",
-  prog_toddler_r3: "መክሰስ እና ታሪክ ጊዜ", prog_toddler_r4: "ውጭ ፍለጋ",
-  prog_toddler_r5: "ምሳ እና እንቅልፍ", prog_toddler_r6: "ሙዚቃ፣ ንቅናቄ እና ነፃ ጨዋታ",
-  prog_toddler_focus: "የቋንቋ ዕድገት፣ ቀደምት ቁጥር መቁጠር፣ ማህበራዊ ክህሎቶች፣ የራስ ርዳታ መሰረት (አመጋገብ፣ ልብስ መልበስ)",
-  prog_young_title: "ወጣት ጊዜያዊ ልጅ እንክብካቤ", prog_young_age: "2 – 3 ዓመት",
-  prog_young_desc: "ፈጠራ ጨዋታ፣ ቀደምት ትምህርት እና ራሱን መቻል ማዳበር በኩል ራስ ወዳድ እና ጉጉ ተማሪዎችን ማዘጋጀት።",
-  prog_young_ratio: "1 ተንከባካቢ ለ6 ልጆች",
-  prog_young_r1: "የጠዋት ሰላምታ እና ቀን ቆጠራ", prog_young_r2: "ቅድመ-ጽሕፈት እና ቅርጽ እንቅስቃሴዎች",
-  prog_young_r3: "ሳይንስ እና ተፈጥሮ ፍለጋ", prog_young_r4: "ውጭ ጨዋታ እና ጠቅላላ ሞተር",
-  prog_young_r5: "ምሳ እና ጸጥ ያለ ጊዜ", prog_young_r6: "ድራማ ጨዋታ እና የቡድን ፕሮጀክቶች",
-  prog_young_focus: "ቅድመ-ፊደል፣ ቀደምት የሂሳብ ፅንሰ-ሀሳቦች፣ ስሜታዊ ቁጥጥር፣ ትብብር ጨዋታ፣ ለትምህርት ቤት ዝግጁነት",
+  // ሕፃናት (6–12 ወር)
+  prog_infant_title: "ሕፃናት", prog_infant_age: "6 – 12 ወር",
+  prog_infant_desc: "መመገብ፣ ንጽህና፣ ደህንነቱ የተጠበቀ እንቅልፍ እና ቅርብ ክትትል — ቀደምት ዕድገትን ለመደገፍ።",
+  prog_infant_i1_label: "መመገብ፦", prog_infant_i1_text: "ተገቢ ተጨማሪ ምግብ መስጠትና ጡት ማጥባትን መደገፍ።",
+  prog_infant_i2_label: "ንጽህና፦", prog_infant_i2_text: "ልጁን፣ ልብሱን፣ የመመገቢያ እቃዎችንና የመኝታ ቦታውን ንጹህ ማድረግ።",
+  prog_infant_i3_label: "እረፍት፦", prog_infant_i3_text: "ደህንነቱ የተጠበቀና ምቹ የእረፍትና የእንቅልፍ ጊዜ መስጠት።",
+  prog_infant_i4_label: "እድገት፦", prog_infant_i4_text: "ማነጋገር፣ መዝፈን፣ ፈገግ ማለት፣ ማቀፍና መጫወት።",
+  prog_infant_i5_label: "እንቅስቃሴ፦", prog_infant_i5_text: "ለመሳብ፣ ለመቀመጥ፣ ለመቆምና ለመድረስ የሚያስችል ደህንነቱ የተጠበቀ ቦታ መስጠት።",
+  prog_infant_i6_label: "ደህንነት፦", prog_infant_i6_text: "ልጁን በቅርብ መከታተልና ትንንሽ ወይም አደገኛ ነገሮችን ከእርሱ ማራቅ።",
+  // ታናናሽ ታዳጊ ሕፃናት (1–2 ዓመት)
+  prog_young_title: "ታናናሽ ታዳጊ ሕፃናት", prog_young_age: "1 – 2 ዓመት",
+  prog_young_desc: "ገንቢ ምግብ፣ ቋንቋ ሀብታም ጨዋታ፣ መራመድ እና እንቅስቃሴ — ቀደምት ነፃነትን ለማዳበር።",
+  prog_young_i1_label: "መመገብ፦", prog_young_i1_text: "ገንቢ ምግብና መክሰስ መስጠትና በራሳቸው እንዲመገቡ ማበረታታት።",
+  prog_young_i2_label: "ንጽህና፦", prog_young_i2_text: "እጅ መታጠብን፣ ዳይፐር/መፀዳጃ አጠቃቀምን፣ መታጠብንና ንጹህ ልብስ መልበስን መደገፍ።",
+  prog_young_i3_label: "ቋንቋ፦", prog_young_i3_text: "ማነጋገር፣ ነገሮችን በስም መጥራት፣ ዘፈኖችን መዝፈንና ቀላል ቃላትን እንዲጠቀሙ ማበረታታት።",
+  prog_young_i4_label: "እንቅስቃሴ፦", prog_young_i4_text: "መራመድን፣ መሮጥን፣ መውጣትንና ቀላል አካላዊ ጨዋታን ማበረታታት።",
+  prog_young_i5_label: "ጨዋታ፦", prog_young_i5_text: "ቀላል መጫወቻዎችን፣ የስዕል መጻሕፍትን፣ ሙዚቃንና ደህንነቱ የተጠበቀ የመመራመር ዕድል መስጠት።",
+  prog_young_i6_label: "ነፃነት፦", prog_young_i6_text: "ቀላል ተግባራትን በራሳቸው እንዲያከናውኑ ማበረታታት።",
+  // ታዳጊ ሕፃናት (2–3 ዓመት)
+  prog_toddler_title: "ታዳጊ ሕፃናት", prog_toddler_age: "2 – 3 ዓመት",
+  prog_toddler_desc: "በጨዋታ መማር፣ ማህበራዊ ክህሎቶችና ነፃነት — የአካባቢ ቁሳቁሶችና ዕለታዊ ተግባራትን በመጠቀም።",
+  prog_toddler_i1_label: "መመገብ፦", prog_toddler_i1_text: "የተመጣጠነ የአካባቢ ምግብ መስጠትና በራሳቸው እንዲመገቡ ማበረታታት።",
+  prog_toddler_i2_label: "ንጽህና፦", prog_toddler_i2_text: "እጅ መታጠብን፣ መፀዳጃ ቤት አጠቃቀምንና የግል ንጽህናን ማስተማር።",
+  prog_toddler_i3_label: "ቋንቋ፦", prog_toddler_i3_text: "መናገርን፣ ማዳመጥን፣ ነገሮችን በስም መጥራትንና ቀላል ውይይትን ማበረታታት።",
+  prog_toddler_i4_label: "በጨዋታ መማር፦", prog_toddler_i4_text: "የአካባቢ ቁሳቁሶችን፣ መጫወቻዎችን፣ ዘፈኖችን፣ ተረቶችን፣ ስዕልንና ቀላል ጨዋታዎችን መጠቀም።",
+  prog_toddler_i5_label: "ማህበራዊ ክህሎት፦", prog_toddler_i5_text: "መካፈልን፣ ተራ በተራ መጠቀምን፣ ሰላምታ መስጠትንና ከሌሎች ጋር መጫወትን ማስተማር።",
+  prog_toddler_i6_label: "ነፃነት፦", prog_toddler_i6_text: "መልበስን፣ መመገብን፣ የተጠቀሙትን ማጽዳትንና ሌሎች ቀላል የራስ-እርዳታ ተግባራትን እንዲለማመዱ ማድረግ።",
+  // የቅድመ መደበኛ (3–4 ዓመት)
+  prog_pre_title: "የቅድመ መደበኛ", prog_pre_age: "3 – 4 ዓመት",
+  prog_pre_desc: "ቁጥሮች፣ ፊደላት፣ ፈጠራ እና ውጭ ጨዋታ — ራስ ወዳድነትና ለትምህርት ቤት ዝግጁነትን ለመገንባት።",
+  prog_pre_i1_label: "መማር፦", prog_pre_i1_text: "ቀላል ቁጥሮችን፣ ፊደላትን፣ ቀለማትን፣ ቅርጾችንና የዕለት ተዕለት ጽንሰ-ሀሳቦችን ማስተዋወቅ።",
+  prog_pre_i2_label: "ቋንቋ፦", prog_pre_i2_text: "የመናገር፣ የማዳመጥ፣ የተረት አቀራረብና የቃላት እውቀትን ማዳበር።",
+  prog_pre_i3_label: "ማህበራዊ እድገት፦", prog_pre_i3_text: "መተባበርን፣ መካፈልን፣ መከባበርንና ቀላል ደንቦችን መከተልን ማስተማር።",
+  prog_pre_i4_label: "ፈጠራ፦", prog_pre_i4_text: "ስዕል፣ ቀለም መቀባት፣ ሙዚቃ፣ ዘፈን፣ ተረትና የሚና ጨዋታ ማካተት።",
+  prog_pre_i5_label: "አካላዊ እድገት፦", prog_pre_i5_text: "የውጭ ጨዋታ፣ መሮጥ፣ መዝለል፣ ሚዛንን መጠበቅና ሌሎች አካላዊ ተግባራትን ማካተት።",
+  prog_pre_i6_label: "ለትምህርት ዝግጁነት፦", prog_pre_i6_text: "ትኩረትን፣ ተሳትፎን፣ በራስ መተማመንን፣ ነፃነትንና ቀላል የመማር ልማዶችን ማዳበር።",
   prog_learn_more: "ተጨማሪ ይወቁ", prog_show_less: "ያነሱ ያሳዩ",
   prog_ratio_label: "ጥምርታ፡", prog_focus_label: "ትኩረት፡",
   schedule_label: "የዕለት መርሃ ግብር", schedule_heading: "በሕይወት ውስጥ አንድ ቀን",
@@ -301,30 +331,44 @@ const translations = {
   trust_label: "Ninkini Lamini Hawagi", trust_heading: "Ninkisi Xaa Barete Ninkisi Gede",
   trust_licensed: "Macciishshino Gammadino", trust_ratio: "Loosanni – Borrote Qaaggino",
   trust_cpr: "CPR & Bortaje Hawagi", trust_background: "Hakkono Madino", trust_years: "Hawagisi Diro",
-  programs_label: "Kaaishsha Mittimanke", trust_heading: "Xaa Barete Ninkisi Gede",
-  programs_heading: "Bare bare Diro Ikkinni Hawagi",
+  programs_label: "Kaaishsha Mittimanke", programs_heading: "Bare bare Diro Ikkinni Hawagi",
   programs_sub: "Bare bare Kaaishsha Ninkisi Gede Bortaje Mittimanka Barete Hawagisi Ikkinni Xa'ino.",
-  prog_infant_title: "Macciishshino Borrote Hawagi", prog_infant_age: "6 – 12 Ardu",
-  prog_infant_desc: "Ledo Loosanni Ninkisi Gede Hawagi, Soqqama Ninkisi Gede Ikkinni Afirimankisi.",
-  prog_infant_ratio: "1 Loosanni 4 Borrote Jawaano", prog_infant_routine_title: "Naamu Kaaishsha:",
-  prog_infant_r1: "Haananno & Lexxo Xaadissanno", prog_infant_r2: "Soqqishsha (Xaarati/Soorrate Kaaishsha)",
-  prog_infant_r3: "Hawagi Xaadissanno", prog_infant_r4: "Afirimankisi & Loosanno Xaadissanno",
-  prog_infant_r5: "Roso (Gede bare bare Kaaishsha)", prog_infant_r6: "Kiino & Soqqama Kaaishsha",
-  prog_infant_focus: "Hawagi Gede, Loosanno Afirima, Kaa Ledo, Soqqama Ninkisi",
-  prog_toddler_title: "Bare Borrote Hawagi", prog_toddler_age: "1 – 2 Diro",
-  prog_toddler_desc: "Bortaje Xaadissanno Ledo Ikkinni Kaa Loosanno, Soqqama Kaaishsha Ninkisi.",
-  prog_toddler_ratio: "1 Loosanni 6 Bare Borrote Jawaano",
-  prog_toddler_r1: "Worre Kiino & Dancha", prog_toddler_r2: "Hunca & Hawagi Xaadissanno",
-  prog_toddler_r3: "Makka & Haro Kaaishsha", prog_toddler_r4: "Gaalo Xaadissanno",
-  prog_toddler_r5: "Gaamma & Roso", prog_toddler_r6: "Kiino, Loosanno & Lexxo Xaadissanno",
-  prog_toddler_focus: "Kaa Loosanno, Qaaggino Ledo, Soqqama Afirima, Gede Hawagi Afirima",
-  prog_young_title: "Bare bare Borrote Hawagi", prog_young_age: "2 – 3 Diro",
-  prog_young_desc: "Lexxo Xaadissanno, Kaa Loosanno Ninkisi Gede Bortaje Soqqama.",
-  prog_young_ratio: "1 Loosanni 6 Borrote Jawaano",
-  prog_young_r1: "Worre Dancha & Baalisha", prog_young_r2: "Xaffe Ledo & Afirima Xaadissanno",
-  prog_young_r3: "Sayansi & Gara Xaadissanno", prog_young_r4: "Gaalo Xaadissanno & Loosanno",
-  prog_young_r5: "Gaamma & Roso Kaaishsha", prog_young_r6: "Xaadissanno & Qaaggino Kaaishsha",
-  prog_young_focus: "Xaffe Ledo, Qaaggino Afirima, Soqqama Xawino, Kaaishsha Ninkisi",
+  // Infants (6–12 months) — TODO: needs native Sidaamu Afoo translation
+  prog_infant_title: "Infants", prog_infant_age: "6 – 12 months", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_desc: "Feeding, hygiene, safe sleep, and close supervision to support early development.", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_i1_label: "Feeding:", prog_infant_i1_text: "Provide appropriate complementary food and breastfeeding support.", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_i2_label: "Hygiene:", prog_infant_i2_text: "Keep the baby, clothes, feeding materials, and sleeping area clean.", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_i3_label: "Sleep:", prog_infant_i3_text: "Provide safe and comfortable rest and sleep.", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_i4_label: "Development:", prog_infant_i4_text: "Talk, sing, smile, hold, and play with the baby.", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_i5_label: "Movement:", prog_infant_i5_text: "Provide safe space for crawling, sitting, standing, and reaching.", // TODO: needs native Sidaamu Afoo translation
+  prog_infant_i6_label: "Safety:", prog_infant_i6_text: "Closely supervise the baby and keep small or dangerous objects away.", // TODO: needs native Sidaamu Afoo translation
+  // Young Toddlers (1–2 years) — TODO: needs native Sidaamu Afoo translation
+  prog_young_title: "Young Toddlers", prog_young_age: "1 – 2 years", // TODO: needs native Sidaamu Afoo translation
+  prog_young_desc: "Nutritious meals, language-rich play, walking and movement to build early independence.", // TODO: needs native Sidaamu Afoo translation
+  prog_young_i1_label: "Feeding:", prog_young_i1_text: "Provide nutritious meals and snacks and encourage self-feeding.", // TODO: needs native Sidaamu Afoo translation
+  prog_young_i2_label: "Hygiene:", prog_young_i2_text: "Support handwashing, diapering/toileting, bathing, and clean clothing.", // TODO: needs native Sidaamu Afoo translation
+  prog_young_i3_label: "Language:", prog_young_i3_text: "Talk, name objects, sing songs, and encourage simple words.", // TODO: needs native Sidaamu Afoo translation
+  prog_young_i4_label: "Movement:", prog_young_i4_text: "Encourage walking, running, climbing, and simple physical play.", // TODO: needs native Sidaamu Afoo translation
+  prog_young_i5_label: "Play:", prog_young_i5_text: "Provide simple toys, picture books, music, and safe exploration.", // TODO: needs native Sidaamu Afoo translation
+  prog_young_i6_label: "Independence:", prog_young_i6_text: "Encourage children to do simple things by themselves.", // TODO: needs native Sidaamu Afoo translation
+  // Toddlers (2–3 years) — TODO: needs native Sidaamu Afoo translation
+  prog_toddler_title: "Toddlers", prog_toddler_age: "2 – 3 years", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_desc: "Learning through play, social skills, and personal independence using local materials and daily routines.", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_i1_label: "Feeding:", prog_toddler_i1_text: "Provide balanced local foods and encourage children to eat independently.", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_i2_label: "Hygiene:", prog_toddler_i2_text: "Teach handwashing, toilet use, and personal cleanliness.", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_i3_label: "Language:", prog_toddler_i3_text: "Encourage speaking, listening, naming, and simple conversations.", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_i4_label: "Learning through play:", prog_toddler_i4_text: "Use local materials, toys, songs, stories, drawing, and simple games.", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_i5_label: "Social skills:", prog_toddler_i5_text: "Teach sharing, taking turns, greeting, and playing with others.", // TODO: needs native Sidaamu Afoo translation
+  prog_toddler_i6_label: "Independence:", prog_toddler_i6_text: "Encourage dressing, eating, cleaning up, and other simple self-help activities.", // TODO: needs native Sidaamu Afoo translation
+  // Preschool Age (3–4 years) — TODO: needs native Sidaamu Afoo translation
+  prog_pre_title: "Preschool Age", prog_pre_age: "3 – 4 years", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_desc: "Numbers, letters, creativity, and outdoor play to build confidence and school readiness.", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_i1_label: "Learning:", prog_pre_i1_text: "Introduce simple numbers, letters, colors, shapes, and everyday concepts.", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_i2_label: "Language:", prog_pre_i2_text: "Develop speaking, listening, storytelling, and vocabulary.", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_i3_label: "Social development:", prog_pre_i3_text: "Teach cooperation, sharing, respect, and following simple rules.", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_i4_label: "Creativity:", prog_pre_i4_text: "Provide drawing, coloring, music, singing, storytelling, and role play.", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_i5_label: "Physical development:", prog_pre_i5_text: "Provide outdoor play, running, jumping, balancing, and other physical activities.", // TODO: needs native Sidaamu Afoo translation
+  prog_pre_i6_label: "School readiness:", prog_pre_i6_text: "Develop attention, participation, self-confidence, independence, and simple learning routines.", // TODO: needs native Sidaamu Afoo translation
   prog_learn_more: "Wolu Afiri", prog_show_less: "Ledo Afiri",
   prog_ratio_label: "Qaaggino:", prog_focus_label: "Ninkisi:",
   schedule_label: "Bare bare Kaaishsha", schedule_heading: "Bare Kiino Gede",

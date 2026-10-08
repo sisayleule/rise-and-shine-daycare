@@ -222,108 +222,120 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:#8BA888;box-sh
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-darken" data-i18n="programs_heading">Age-Appropriate Care for Every Stage</h2>
     <p class="text-gray-500 mt-3 max-w-xl mx-auto text-sm sm:text-base" data-i18n="programs_sub">Each program is designed to nurture your child's developmental milestones in a safe, stimulating environment.</p>
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-6">
+  <!-- Desktop: 4 columns at 1280+; tablet: 2 columns; mobile: 1 column -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
-    <!-- Infant Care -->
-    <div class="bg-white shadow-xl rounded-xl overflow-hidden">
-      <div class="p-6 text-center" style="background-color:rgba(139,168,136,0.1);">
-        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto bg-sage shadow-lg transform -translate-y-4">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+    <!-- Card 1: Infants (6–12 months) — sage -->
+    <div class="bg-white shadow-xl rounded-xl overflow-hidden flex flex-col">
+      <div class="pt-10 pb-2 px-6 text-center" style="background-color:rgba(139,168,136,0.1);">
+        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto bg-sage shadow-lg">
+          <!-- baby / heart icon -->
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
         </div>
       </div>
-      <div class="p-6">
-        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_infant_title">Infant Care</h3>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_infant_title">Infants</h3>
         <p class="text-yellow-500 font-semibold text-sm mb-3" data-i18n="prog_infant_age">6 – 12 months</p>
-        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_infant_desc">Gentle, responsive care focused on building secure attachment and reaching early motor milestones.</p>
-        <button @click="active==='infant'?active=null:active='infant'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none">
-          <span x-text="active==='infant' ? 'Show less' : 'Learn more'">Learn more</span>
+        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_infant_desc">Feeding, hygiene, safe sleep, and close supervision to support early development.</p>
+        <button @click="active==='infant'?active=null:active='infant'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none mt-auto">
+          <span x-text="active==='infant' ? t('prog_show_less') : t('prog_learn_more')">Learn more</span>
           <svg class="w-4 h-4 transition transform" :class="active==='infant'?'rotate-180':''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="accordion-content" :class="active==='infant'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
-          <div class="border-t border-gray-100 pt-4 space-y-3 text-sm text-gray-500">
-            <div><span class="font-semibold text-darken" data-i18n="prog_ratio_label">Ratio:</span> <span data-i18n="prog_infant_ratio">1 caregiver per 4 infants</span></div>
-            <div>
-              <span class="font-semibold text-darken" data-i18n="prog_infant_routine_title">Sample Routine:</span>
-              <ul class="list-disc list-inside mt-1 space-y-1">
-                <li data-i18n="prog_infant_r1">Arrival &amp; free play</li>
-                <li data-i18n="prog_infant_r2">Feeding (bottle/solids per schedule)</li>
-                <li data-i18n="prog_infant_r3">Sensory exploration</li>
-                <li data-i18n="prog_infant_r4">Tummy time &amp; motor activities</li>
-                <li data-i18n="prog_infant_r5">Nap (on individual schedule)</li>
-                <li data-i18n="prog_infant_r6">Music &amp; cuddle time</li>
-              </ul>
-            </div>
-            <div><span class="font-semibold text-darken" data-i18n="prog_focus_label">Focus:</span> <span data-i18n="prog_infant_focus">Sensory development, fine/gross motor skills, language exposure, secure attachment</span></div>
+        <div class="accordion-content" :class="active==='infant'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.5s ease">
+          <div class="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-600">
+            <p><strong class="text-darken" data-i18n="prog_infant_i1_label">Feeding:</strong> <span data-i18n="prog_infant_i1_text">Provide appropriate complementary food and breastfeeding support.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_infant_i2_label">Hygiene:</strong> <span data-i18n="prog_infant_i2_text">Keep the baby, clothes, feeding materials, and sleeping area clean.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_infant_i3_label">Sleep:</strong> <span data-i18n="prog_infant_i3_text">Provide safe and comfortable rest and sleep.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_infant_i4_label">Development:</strong> <span data-i18n="prog_infant_i4_text">Talk, sing, smile, hold, and play with the baby.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_infant_i5_label">Movement:</strong> <span data-i18n="prog_infant_i5_text">Provide safe space for crawling, sitting, standing, and reaching.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_infant_i6_label">Safety:</strong> <span data-i18n="prog_infant_i6_text">Closely supervise the baby and keep small or dangerous objects away.</span></p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Toddler Care -->
-    <div class="bg-white shadow-xl rounded-xl overflow-hidden">
-      <div class="p-6 text-center" style="background-color:rgba(244,140,6,0.08);">
-        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto bg-yellow-500 shadow-lg transform -translate-y-4">
+    <!-- Card 2: Young Toddlers (1–2 years) — amber -->
+    <div class="bg-white shadow-xl rounded-xl overflow-hidden flex flex-col">
+      <div class="pt-10 pb-2 px-6 text-center" style="background-color:rgba(244,140,6,0.08);">
+        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto bg-yellow-500 shadow-lg">
+          <!-- steps / walking icon -->
           <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
       </div>
-      <div class="p-6">
-        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_toddler_title">Toddler Care</h3>
-        <p class="text-yellow-500 font-semibold text-sm mb-3" data-i18n="prog_toddler_age">1 – 2 years</p>
-        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_toddler_desc">Active exploration and early learning through structured play, language-rich interactions, and social growth.</p>
-        <button @click="active==='toddler'?active=null:active='toddler'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none">
-          <span x-text="active==='toddler' ? 'Show less' : 'Learn more'">Learn more</span>
-          <svg class="w-4 h-4 transition transform" :class="active==='toddler'?'rotate-180':''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_young_title">Young Toddlers</h3>
+        <p class="text-yellow-500 font-semibold text-sm mb-3" data-i18n="prog_young_age">1 – 2 years</p>
+        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_young_desc">Nutritious meals, language-rich play, walking and movement to build early independence.</p>
+        <button @click="active==='young'?active=null:active='young'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none mt-auto">
+          <span x-text="active==='young' ? t('prog_show_less') : t('prog_learn_more')">Learn more</span>
+          <svg class="w-4 h-4 transition transform" :class="active==='young'?'rotate-180':''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="accordion-content" :class="active==='toddler'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
-          <div class="border-t border-gray-100 pt-4 space-y-3 text-sm text-gray-500">
-            <div><span class="font-semibold text-darken" data-i18n="prog_ratio_label">Ratio:</span> <span data-i18n="prog_toddler_ratio">1 caregiver per 6 toddlers</span></div>
-            <div>
-              <span class="font-semibold text-darken" data-i18n="prog_infant_routine_title">Sample Routine:</span>
-              <ul class="list-disc list-inside mt-1 space-y-1">
-                <li data-i18n="prog_toddler_r1">Morning circle &amp; welcome</li>
-                <li data-i18n="prog_toddler_r2">Art &amp; sensory play</li>
-                <li data-i18n="prog_toddler_r3">Snack &amp; story time</li>
-                <li data-i18n="prog_toddler_r4">Outdoor exploration</li>
-                <li data-i18n="prog_toddler_r5">Lunch &amp; nap</li>
-                <li data-i18n="prog_toddler_r6">Music, movement &amp; free play</li>
-              </ul>
-            </div>
-            <div><span class="font-semibold text-darken" data-i18n="prog_focus_label">Focus:</span> <span data-i18n="prog_toddler_focus">Language development, early counting, social skills, self-help basics (feeding, dressing)</span></div>
+        <div class="accordion-content" :class="active==='young'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.5s ease">
+          <div class="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-600">
+            <p><strong class="text-darken" data-i18n="prog_young_i1_label">Feeding:</strong> <span data-i18n="prog_young_i1_text">Provide nutritious meals and snacks and encourage self-feeding.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_young_i2_label">Hygiene:</strong> <span data-i18n="prog_young_i2_text">Support handwashing, diapering/toileting, bathing, and clean clothing.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_young_i3_label">Language:</strong> <span data-i18n="prog_young_i3_text">Talk, name objects, sing songs, and encourage simple words.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_young_i4_label">Movement:</strong> <span data-i18n="prog_young_i4_text">Encourage walking, running, climbing, and simple physical play.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_young_i5_label">Play:</strong> <span data-i18n="prog_young_i5_text">Provide simple toys, picture books, music, and safe exploration.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_young_i6_label">Independence:</strong> <span data-i18n="prog_young_i6_text">Encourage children to do simple things by themselves.</span></p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Young Toddler Care -->
-    <div class="bg-white shadow-xl rounded-xl overflow-hidden">
-      <div class="p-6 text-center" style="background-color:rgba(243,98,124,0.08);">
-        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-4" style="background-color:#F3627C;">
+    <!-- Card 3: Toddlers (2–3 years) — coral -->
+    <div class="bg-white shadow-xl rounded-xl overflow-hidden flex flex-col">
+      <div class="pt-10 pb-2 px-6 text-center" style="background-color:rgba(243,98,124,0.08);">
+        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg" style="background-color:#F3627C;">
+          <!-- lightbulb / play icon -->
           <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
       </div>
-      <div class="p-6">
-        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_young_title">Young Toddler Care</h3>
-        <p class="text-yellow-500 font-semibold text-sm mb-3" data-i18n="prog_young_age">2 – 3 years</p>
-        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_young_desc">Preparing confident, curious learners through creative play, early academics, and independence building.</p>
-        <button @click="active==='young'?active=null:active='young'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none">
-          <span x-text="active==='young' ? 'Show less' : 'Learn more'">Learn more</span>
-          <svg class="w-4 h-4 transition transform" :class="active==='young'?'rotate-180':''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_toddler_title">Toddlers</h3>
+        <p class="text-yellow-500 font-semibold text-sm mb-3" data-i18n="prog_toddler_age">2 – 3 years</p>
+        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_toddler_desc">Learning through play, social skills, and personal independence using local materials and daily routines.</p>
+        <button @click="active==='toddler'?active=null:active='toddler'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none mt-auto">
+          <span x-text="active==='toddler' ? t('prog_show_less') : t('prog_learn_more')">Learn more</span>
+          <svg class="w-4 h-4 transition transform" :class="active==='toddler'?'rotate-180':''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="accordion-content" :class="active==='young'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease">
-          <div class="border-t border-gray-100 pt-4 space-y-3 text-sm text-gray-500">
-            <div><span class="font-semibold text-darken" data-i18n="prog_ratio_label">Ratio:</span> <span data-i18n="prog_young_ratio">1 caregiver per 6 children</span></div>
-            <div>
-              <span class="font-semibold text-darken" data-i18n="prog_infant_routine_title">Sample Routine:</span>
-              <ul class="list-disc list-inside mt-1 space-y-1">
-                <li data-i18n="prog_young_r1">Morning greeting &amp; calendar</li>
-                <li data-i18n="prog_young_r2">Pre-writing &amp; shape activities</li>
-                <li data-i18n="prog_young_r3">Science &amp; nature exploration</li>
-                <li data-i18n="prog_young_r4">Outdoor play &amp; gross motor</li>
-                <li data-i18n="prog_young_r5">Lunch &amp; quiet time</li>
-                <li data-i18n="prog_young_r6">Dramatic play &amp; group projects</li>
-              </ul>
-            </div>
-            <div><span class="font-semibold text-darken" data-i18n="prog_focus_label">Focus:</span> <span data-i18n="prog_young_focus">Pre-literacy, early math concepts, emotional regulation, cooperative play, school readiness</span></div>
+        <div class="accordion-content" :class="active==='toddler'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.5s ease">
+          <div class="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-600">
+            <p><strong class="text-darken" data-i18n="prog_toddler_i1_label">Feeding:</strong> <span data-i18n="prog_toddler_i1_text">Provide balanced local foods and encourage children to eat independently.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_toddler_i2_label">Hygiene:</strong> <span data-i18n="prog_toddler_i2_text">Teach handwashing, toilet use, and personal cleanliness.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_toddler_i3_label">Language:</strong> <span data-i18n="prog_toddler_i3_text">Encourage speaking, listening, naming, and simple conversations.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_toddler_i4_label">Learning through play:</strong> <span data-i18n="prog_toddler_i4_text">Use local materials, toys, songs, stories, drawing, and simple games.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_toddler_i5_label">Social skills:</strong> <span data-i18n="prog_toddler_i5_text">Teach sharing, taking turns, greeting, and playing with others.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_toddler_i6_label">Independence:</strong> <span data-i18n="prog_toddler_i6_text">Encourage dressing, eating, cleaning up, and other simple self-help activities.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Preschool Age (3–4 years) — sky/blue -->
+    <div class="bg-white shadow-xl rounded-xl overflow-hidden flex flex-col">
+      <div class="pt-10 pb-2 px-6 text-center" style="background-color:rgba(184,226,242,0.3);">
+        <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg" style="background-color:#5BAACC;">
+          <!-- academic cap icon -->
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-bold text-lg text-darken mb-1" data-i18n="prog_pre_title">Preschool Age</h3>
+        <p class="text-yellow-500 font-semibold text-sm mb-3" data-i18n="prog_pre_age">3 – 4 years</p>
+        <p class="text-gray-500 text-sm mb-4" data-i18n="prog_pre_desc">Numbers, letters, creativity, and outdoor play to build confidence and school readiness.</p>
+        <button @click="active==='pre'?active=null:active='pre'" class="text-sage font-semibold text-sm flex items-center space-x-1 hover:text-sage-dark transition focus:outline-none mt-auto">
+          <span x-text="active==='pre' ? t('prog_show_less') : t('prog_learn_more')">Learn more</span>
+          <svg class="w-4 h-4 transition transform" :class="active==='pre'?'rotate-180':''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content" :class="active==='pre'?'open':''" style="max-height:0;overflow:hidden;transition:max-height 0.5s ease">
+          <div class="border-t border-gray-100 pt-4 space-y-2 text-sm text-gray-600">
+            <p><strong class="text-darken" data-i18n="prog_pre_i1_label">Learning:</strong> <span data-i18n="prog_pre_i1_text">Introduce simple numbers, letters, colors, shapes, and everyday concepts.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_pre_i2_label">Language:</strong> <span data-i18n="prog_pre_i2_text">Develop speaking, listening, storytelling, and vocabulary.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_pre_i3_label">Social development:</strong> <span data-i18n="prog_pre_i3_text">Teach cooperation, sharing, respect, and following simple rules.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_pre_i4_label">Creativity:</strong> <span data-i18n="prog_pre_i4_text">Provide drawing, coloring, music, singing, storytelling, and role play.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_pre_i5_label">Physical development:</strong> <span data-i18n="prog_pre_i5_text">Provide outdoor play, running, jumping, balancing, and other physical activities.</span></p>
+            <p><strong class="text-darken" data-i18n="prog_pre_i6_label">School readiness:</strong> <span data-i18n="prog_pre_i6_text">Develop attention, participation, self-confidence, independence, and simple learning routines.</span></p>
           </div>
         </div>
       </div>
